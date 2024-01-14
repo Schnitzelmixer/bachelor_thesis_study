@@ -11,9 +11,4 @@ public class AnnotationPosition : MonoBehaviour
     {
         this.transform.position = relatedHighlight.transform.position + new Vector3(0, 0.1f, 0);
     }
-
-    void Update()
-    {
-
-    }
 }
