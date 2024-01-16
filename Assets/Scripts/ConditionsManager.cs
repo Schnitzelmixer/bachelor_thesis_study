@@ -84,6 +84,10 @@ public class ConditionsManager : MonoBehaviour
             annotationTutorial.SetActive(true);
             activateAnnotations(this.articleGameObject);
         }
+        else if (this.indicator == Indicator.ForewarningMessage)
+        {
+            forewarningMessage.SetActive(true);
+        }
 
         Debug.Log(
             "Iteration " + this.iteration + " - " +
@@ -128,19 +132,8 @@ public class ConditionsManager : MonoBehaviour
         {
             introduction.SetActive(false);
             annotationTutorial.SetActive(false);
-
-            if (this.indicator == Indicator.ForewarningMessage)
-            {
-                forewarningMessage.SetActive(true);
-            }
-            else
-            {
-                articleGameObject.SetActive(true);
-            }
-        }
-        else if (forewarningMessage.activeSelf)
-        {
             forewarningMessage.SetActive(false);
+
             articleGameObject.SetActive(true);
         }
         else if (articleGameObject.activeSelf)
