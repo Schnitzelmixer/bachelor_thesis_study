@@ -18,6 +18,8 @@ public class HighlightAndAnnotationManager : MonoBehaviour, IPointerEnterHandler
 
     private Color hoverColor = new Color(1.0f, 0.97f, 0.0f, 1.0f);
 
+    private Color secondHighlightHoverColor = new Color(1.0f, 0.88f, 0.0f, 1.0f);
+
     void Start()
     {
 		this.image = this.GetComponent<Image>();
@@ -27,7 +29,10 @@ public class HighlightAndAnnotationManager : MonoBehaviour, IPointerEnterHandler
     {
         if (OVRInput.Get(OVRInput.RawButton.LIndexTrigger) || OVRInput.Get(OVRInput.RawButton.RIndexTrigger))
         {
-            this.currentlyActiveAnnotation.SetActive(false);
+            if (this.currentlyActiveAnnotation != null)
+            {
+                this.currentlyActiveAnnotation.SetActive(false);
+            }
         }
     }
 
@@ -42,7 +47,7 @@ public class HighlightAndAnnotationManager : MonoBehaviour, IPointerEnterHandler
         image.color = hoverColor;
         if (optionalSecondHighlight != null)
         {
-            optionalSecondHighlight.GetComponent<Image>().color = hoverColor;
+            optionalSecondHighlight.GetComponent<Image>().color = secondHighlightHoverColor;
         }        
     }
 

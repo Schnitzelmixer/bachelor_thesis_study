@@ -4,14 +4,28 @@ using System.Linq;
 using ArticleAndIndicatorEnums;
 using UnityEditor;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class ConditionsManager : MonoBehaviour
 {
+    public Button continueButton;
+    public GameObject articleLeftAbortion;
+    public GameObject articleLeftGun;
+    public GameObject articleRightAbortion;
+    public GameObject articleRightGun;
+    public GameObject forewarningMessage;
+    public GameObject politicalClassificationLeft;
+    public GameObject politicalClassificationRight;
+    public GameObject introduction;
+    public GameObject breaker;
+    public GameObject annotationTutorial;
+
     private Participant _participant = new Participant();
     private CsvManager _csvManager = new CsvManager(@".\Assets\Csvs\results.csv");
     private int iteration;
     private Article article;
     private Indicator indicator;
+    private GameObject articleGameObject;
 
     void Start()
     {
@@ -63,11 +77,99 @@ public class ConditionsManager : MonoBehaviour
             this.iteration = GetCurrentIteration(partialParticipant);
         }
 
+        assignArticleGameObject(this.article);
+
+        if (this.indicator == Indicator.Annotations)
+        {
+            annotationTutorial.SetActive(true);
+            activateAnnotations(this.articleGameObject);
+        }
+
         Debug.Log(
             "Iteration " + this.iteration + " - " +
             this.article + "(" + (int)this.article + ")" + " - " +
             this.indicator + "(" + (int)this.indicator + ")"
         );
+    }
+
+    private void assignArticleGameObject(Article article)
+    {
+        if (article == Article.LeftAbortion)
+        {
+            articleGameObject = articleLeftAbortion;
+        }
+        else if (article == Article.LeftGun)
+        {
+            articleGameObject = articleLeftGun;
+        }
+        else if (article == Article.RightAbortion)
+        {
+            articleGameObject = articleRightAbortion;
+        }
+        else if (article == Article.RightGun)
+        {
+            articleGameObject = articleRightGun;
+        }
+    }
+
+    private void activateAnnotations(GameObject articleGameObject)
+    {
+        Transform articleGameObjectHighlights = articleGameObject.transform.Find("Highlights");
+
+        for (int i = 0; i < articleGameObjectHighlights.childCount; i++)
+        {
+            articleGameObjectHighlights.GetChild(i).gameObject.SetActive(true);
+        }   
+    }
+
+    public void OnContinue()
+    {
+        if (introduction.activeSelf)
+        {
+            introduction.SetActive(false);
+            annotationTutorial.SetActive(false);
+
+            if (this.indicator == Indicator.ForewarningMessage)
+            {
+                forewarningMessage.SetActive(true);
+            }
+            else
+            {
+                articleGameObject.SetActive(true);
+            }
+        }
+        else if (forewarningMessage.activeSelf)
+        {
+            forewarningMessage.SetActive(false);
+            articleGameObject.SetActive(true);
+        }
+        else if (articleGameObject.activeSelf)
+        {
+            articleGameObject.SetActive(false);
+
+            if (this.indicator == Indicator.PoliticalClassification)
+            {
+                if (this.article == Article.LeftAbortion || this.article == Article.LeftGun)
+                {
+                    politicalClassificationLeft.SetActive(true);
+                }
+                else
+                {
+                    politicalClassificationRight.SetActive(true);
+                }
+            }
+            else
+            {
+                breaker.SetActive(true);
+            }
+        }
+        else if (politicalClassificationLeft.activeSelf || politicalClassificationRight.activeSelf)
+        {
+            politicalClassificationLeft.SetActive(false);
+            politicalClassificationRight.SetActive(false);
+
+            breaker.SetActive(true);
+        }
     }
 
     private int GetCurrentIteration(Participant participant)
