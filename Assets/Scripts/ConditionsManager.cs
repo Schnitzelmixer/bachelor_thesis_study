@@ -114,11 +114,11 @@ public class ConditionsManager : MonoBehaviour
 
     private void activateAnnotations(GameObject articleGameObject)
     {
-        Transform articleGameObjectHighlights = articleGameObject.transform.Find("Highlights");
+        Transform articleGameObjectHighlights = articleGameObject.transform.GetChild(0);
 
-        for (int i = 0; i < articleGameObjectHighlights.childCount; i++)
+        for (int i = 0; i < articleGameObjectHighlights.transform.childCount; i++)
         {
-            articleGameObjectHighlights.GetChild(i).gameObject.SetActive(true);
+            articleGameObjectHighlights.transform.GetChild(i).gameObject.SetActive(true);
         }   
     }
 
