@@ -8,7 +8,7 @@ using UnityEngine.UI;
 
 public class ConditionsManager : MonoBehaviour
 {
-    public Button continueButton;
+    public GameObject continueButton;
     public GameObject articleLeftAbortion;
     public GameObject articleLeftGun;
     public GameObject articleRightAbortion;
@@ -161,6 +161,7 @@ public class ConditionsManager : MonoBehaviour
             else
             {
                 breaker.SetActive(true);
+                continueButton.SetActive(false);
             }
         }
         else if (politicalClassificationLeft.activeSelf || politicalClassificationRight.activeSelf)
@@ -169,6 +170,7 @@ public class ConditionsManager : MonoBehaviour
             politicalClassificationRight.SetActive(false);
 
             breaker.SetActive(true);
+            continueButton.SetActive(false);
         }
     }
 
