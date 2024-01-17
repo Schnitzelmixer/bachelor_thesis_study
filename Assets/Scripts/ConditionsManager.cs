@@ -19,6 +19,7 @@ public class ConditionsManager : MonoBehaviour
     public GameObject introduction;
     public GameObject breaker;
     public GameObject annotationTutorial;
+    public GameObject accustomText;
 
     private Participant _participant = new Participant();
     private CsvManager _csvManager = new CsvManager(@".\Assets\Csvs\results.csv");
@@ -26,6 +27,8 @@ public class ConditionsManager : MonoBehaviour
     private Article article;
     private Indicator indicator;
     private GameObject articleGameObject;
+    private float accustomTime = 30.0f;
+    private bool timerEventDone = false;
 
     void Start()
     {
@@ -79,14 +82,13 @@ public class ConditionsManager : MonoBehaviour
 
         assignArticleGameObject(this.article);
 
-        if (this.indicator == Indicator.Annotations)
+        if (this.iteration == 0)
         {
-            annotationTutorial.SetActive(true);
-            activateAnnotations(this.articleGameObject);
+            accustomText.SetActive(true);
         }
-        else if (this.indicator == Indicator.ForewarningMessage)
+        else
         {
-            forewarningMessage.SetActive(true);
+            initiateFirstPage(this.indicator);
         }
 
         Debug.Log(
@@ -94,6 +96,37 @@ public class ConditionsManager : MonoBehaviour
             this.article + "(" + (int)this.article + ")" + " - " +
             this.indicator + "(" + (int)this.indicator + ")"
         );
+    }
+
+    void Update()
+    {
+        accustomTime -= Time.deltaTime;
+
+        if (this.iteration == 0 && !timerEventDone)
+        {
+            if (accustomTime <= 0.0f)
+            {
+                initiateFirstPage(this.indicator);
+                timerEventDone = true;
+            }
+        }
+    }
+
+    private void initiateFirstPage(Indicator indicator)
+    {
+        accustomText.SetActive(false);
+        continueButton.SetActive(true);
+        introduction.SetActive(true);
+
+        if (indicator == Indicator.Annotations)
+        {
+            annotationTutorial.SetActive(true);
+            activateAnnotations(this.articleGameObject);
+        }
+        else if (indicator == Indicator.ForewarningMessage)
+        {
+            forewarningMessage.SetActive(true);
+        }
     }
 
     private void assignArticleGameObject(Article article)
