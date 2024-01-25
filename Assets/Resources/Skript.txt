@@ -1,0 +1,10 @@
+CONSENTS
+
+FRAGEBOGEN bis da steht, dass du dich an mich wenden sollst
+
+STEUERUNG erklären
+-> Linker Joystick bewegen
+-> Rechter Joystick Kamera
+-> Zeigefinger Button zum Interagieren
+
+VR

@@ -1,0 +1,13 @@
+Generell:
+- Article Right Gun - Annotations -> NullReference: HighlightandAnnotationManager 
+- Kleine Probleme beim Anklicken der Annotations
+- Manche Probanden dachten, sie könnten mit PoliticalClassificationBar interagieren
+VP1: 
+- Hat versucht, mit politicalClassificationBar zu interagieren
+- Hat nur wenige Annotations angeklickt
+VP2: 
+- War sich nicht sicher, ob sie nur Lesen muss, oder irgendetwas tun (bewegen etc.)
+- Hat den Großteil der Annotations angeklickt
+VP3:
+- Ist sehr nah rangegangen, hat Continue-Button nicht gesehen -> habe kurz gesagt, dass dieser aus Ihrem Sichtfeld ist
+- Hat alle Annotations angeklickt
