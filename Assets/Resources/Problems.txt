@@ -1,7 +1,9 @@
 Generell:
-- Article Right Gun - Annotations -> NullReference: HighlightandAnnotationManager 
+- VPs klicken häufig nur wenige Annotations an + teilweise erst nachdem sie den Text gelesen haben
+- Article Right Gun - Annotations -> NullReference: HighlightandAnnotationManager (kein Impact)
 - Kleine Probleme beim Anklicken der Annotations
 - Manche Probanden dachten, sie könnten mit PoliticalClassificationBar interagieren
+- Nach VP4 AnnotationTutorial-hint, dass quotes nicht einbezogen werden hinzugefügt
 VP1: 
 - Hat versucht, mit politicalClassificationBar zu interagieren
 - Hat nur wenige Annotations angeklickt
@@ -15,4 +17,11 @@ VP4:
 - Hat versucht, mit politicalClassificationBar zu interagieren
 - Hat nur wenige Annotations angeklickt
 VP5:
-- 
+- Hat nur wenige Annotations angeklickt
+VP6:
+- Hat alle Annotations angeklickt
+VP7:
+- Hat alle Annotationen angeklickt
+VP8:
+- Hat einige Annotations angeklickt
+- Hat lieber nur einen Controller benutzt ab 3. Bedingung (den rechten (Kamera))
