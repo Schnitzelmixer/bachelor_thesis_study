@@ -8,3 +8,5 @@ STEUERUNG erklären
 -> Zeigefinger Button zum Interagieren
 
 VR
+
+ENDE: Codewort und Datenschutz mitnehmen

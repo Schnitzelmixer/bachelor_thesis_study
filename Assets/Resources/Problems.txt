@@ -11,3 +11,8 @@ VP2:
 VP3:
 - Ist sehr nah rangegangen, hat Continue-Button nicht gesehen -> habe kurz gesagt, dass dieser aus Ihrem Sichtfeld ist
 - Hat alle Annotations angeklickt
+VP4:
+- Hat versucht, mit politicalClassificationBar zu interagieren
+- Hat nur wenige Annotations angeklickt
+VP5:
+- 
