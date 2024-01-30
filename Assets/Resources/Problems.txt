@@ -2,7 +2,7 @@ Generell:
 - VPs klicken häufig nur wenige Annotations an + teilweise erst nachdem sie den Text gelesen haben
 - Article Right Gun - Annotations -> NullReference: HighlightandAnnotationManager (kein Impact)
 - Kleine Probleme beim Anklicken der Annotations
-- Manche Probanden dachten, sie könnten mit PoliticalClassificationBar interagieren
+- Manche Probanden dachten, sie könnten mit PoliticalClassificationBar interagieren -> Habe ab VP4 ungefähr angefangen bei der Steuerung immer mit zu sagen, dass man "nur mit dem Contine-Button interagieren kann, wenn etwas anders ist, steht es da"
 - Nach VP4 AnnotationTutorial-hint, dass quotes nicht einbezogen werden hinzugefügt
 VP1: 
 - Hat versucht, mit politicalClassificationBar zu interagieren
@@ -25,3 +25,5 @@ VP7:
 VP8:
 - Hat einige Annotations angeklickt
 - Hat lieber nur einen Controller benutzt ab 3. Bedingung (den rechten (Kamera))
+VP9:
+- Hat die meisten Annotations angeklickt
