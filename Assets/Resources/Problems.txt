@@ -27,3 +27,7 @@ VP8:
 - Hat lieber nur einen Controller benutzt ab 3. Bedingung (den rechten (Kamera))
 VP9:
 - Hat die meisten Annotations angeklickt
+VP10:
+- Hat alle Annotations angeklickt
+VP11:
+- Hat die meisten Annotations angeklickt
