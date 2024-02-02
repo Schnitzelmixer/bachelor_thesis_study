@@ -37,3 +37,7 @@ VP12:
 - Feedback: Annotations zu generell -> nicht direkt am Beispiel erklärt sondern nur kategorisiert
 VP13:
 - Hat die meisten Annotations angeklickt
+VP14:
+- Hat die meisten Annotations angeklickt
+VP15:
+- Hat alle Annotations angeklickt
