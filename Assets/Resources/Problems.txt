@@ -41,3 +41,5 @@ VP14:
 - Hat die meisten Annotations angeklickt
 VP15:
 - Hat alle Annotations angeklickt
+VP16:
+- Hat die meisten Annotations angeklickt
