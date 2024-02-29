@@ -45,3 +45,7 @@ VP16:
 - Hat die meisten Annotations angeklickt
 VP17:
 - Hat alle Annotations angeklickt
+VP18:
+- Hat alle Annotations angeklickt
+VP19:
+- Hat die meisten Annotations angeklickt
