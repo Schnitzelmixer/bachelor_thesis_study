@@ -49,3 +49,13 @@ VP18:
 - Hat alle Annotations angeklickt
 VP19:
 - Hat die meisten Annotations angeklickt
+VP20:
+- Hat die meisten Annotations angeklickt
+VP21:
+- Hat die meisten Annotations angeklickt
+VP22:
+- Hat die meisten Annotations angeklickt
+- ANMERKUNG NACH VOLLENDEN DER STUDIE: ER HAT AUSVERSEHEN BEIM 2. ARTIKEL 
+DEN REGLER persuasive-unpersuasive VERTAUSCHT (-2 sollte eigentlich 2 sein)!
+VP23:
+- Hat die meisten Annotations angeklickt
