@@ -62,3 +62,5 @@ VP23:
 VP24:
 - HAT NACHGEFRAGT BEIM NACH ERSTEM ARTIKEL, WAS PERSUASIVE UND PARTIAL AUF DEUTSCH HEIßT -> HABE BEANTWORTET
 - Hat alle Annotations angeklickt
+VP25:
+- Hat die meisten Annotations angeklickt
