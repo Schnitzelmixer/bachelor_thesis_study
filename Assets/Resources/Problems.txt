@@ -59,3 +59,6 @@ VP22:
 DEN REGLER persuasive-unpersuasive VERTAUSCHT (-2 sollte eigentlich 2 sein)!
 VP23:
 - Hat die meisten Annotations angeklickt
+VP24:
+- HAT NACHGEFRAGT BEIM NACH ERSTEM ARTIKEL, WAS PERSUASIVE UND PARTIAL AUF DEUTSCH HEIßT -> HABE BEANTWORTET
+- Hat alle Annotations angeklickt
